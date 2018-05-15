@@ -6,8 +6,8 @@
 	</tr>
 	<tr valign="top">
 		<th scope="row"><?php esc_html_e( 'Re-Permission Campaign ID' , 'mailster-repermission' ) ?></th>
-		<td><input type="text" name="mailster_options[repermission_id]" value="<?php echo esc_attr( mailster_option( 'repermission_id' ) ); ?>" class="small-text">
-		<span class="howto"><?php esc_html_e( 'The ID of your Re-Permission campaign.' , 'mailster-repermission' ) ?></span>
+		<td><input type="text" name="mailster_options[repermission_id]" value="<?php echo esc_attr( mailster_option( 'repermission_id' ) ); ?>" class="regular-text">
+		<span class="howto"><?php esc_html_e( 'The ID of your Re-Permission campaign. You can use multiple IDs seperated with a comma. (12,34,56)' , 'mailster-repermission' ) ?></span>
 		</td>
 	</tr>
 	<tr valign="top">

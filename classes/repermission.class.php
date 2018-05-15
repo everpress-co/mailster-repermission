@@ -54,7 +54,10 @@ class MailsterRePermission {
 		if ( ! $subscriber_id ) {
 			return;
 		}
-		if ( $campaign_id != mailster_option( 'repermission_id' ) ) {
+
+		$repermission_ids = array_map( 'trim', explode( ',' , mailster_option( 'repermission_id' ) ) );
+
+		if ( ! in_array( $campaign_id, $repermission_ids ) ) {
 			return;
 		}
 		if ( $target != mailster_option( 'repermission_link' ) ) {
