@@ -60,15 +60,18 @@ class MailsterRePermission {
 		if ( ! in_array( $campaign_id, $repermission_ids ) ) {
 			return;
 		}
-		if ( $target != mailster_option( 'repermission_link' ) ) {
+
+		if ( ! $target ) {
 			return;
 		}
-
-		if ( ! ( $field = mailster_option( 'repermission_field' ) ) ) {
-			return;
+		if ( $target == mailster_option( 'repermission_link' ) ) {
+			if ( ! ( $field = mailster_option( 'repermission_field' ) ) ) {
+				return;
+			}
+			mailster( 'subscribers' )->add_custom_value( $subscriber_id, $field, true );
+		} elseif ( $target == mailster_option( 'repermission_unlink' ) ) {
+			mailster( 'subscribers' )->unsubscribe( $subscriber_id, $campaign_id, __( 'Didn\'t give consent on the RePermission campaign', 'mailster-repermission' ) );
 		}
-
-		mailster( 'subscribers' )->add_custom_value( $subscriber_id, $field, true );
 
 	}
 
