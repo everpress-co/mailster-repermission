@@ -3,7 +3,7 @@ Contributors: everpress, revaxarts
 Tags: mailster, repermission, permission, gdpr
 Requires at least: 3.8
 Tested up to: 4.9
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv2 or later
 Author: EverPress
 Author URI: https://mailster.co
@@ -28,6 +28,9 @@ Read the [Setup Guide](https://kb.mailster.co/implementing-a-re-permission-progr
 1. Option Interface.
 
 == Changelog ==
+
+= 1.3 =
+* added: export field with timestamp of confirmation (requires Mailster 2.3.7+)
 
 = 1.2 =
 * added: option to define a link for no consent

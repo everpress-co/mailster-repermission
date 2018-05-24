@@ -3,7 +3,7 @@
 Plugin Name: Mailster RePermission
 Plugin URI: https://mailster.co/?utm_campaign=wporg&utm_source=Mailster+Re-Permission+Integration
 Description: Helps to setup your Re-Permission Campaign for GDPR compliance in Mailster.
-Version: 1.2
+Version: 1.3
 Author: EverPress
 Author URI: https://mailster.co
 Text Domain: mailster-repermission
@@ -11,7 +11,7 @@ License: GPLv2 or later
 */
 
 
-define( 'MAILSTER_REPERMISSION_VERSION', '1.2' );
+define( 'MAILSTER_REPERMISSION_VERSION', '1.3' );
 define( 'MAILSTER_REPERMISSION_REQUIRED_VERSION', '2.3' );
 define( 'MAILSTER_REPERMISSION_FILE', __FILE__ );
 

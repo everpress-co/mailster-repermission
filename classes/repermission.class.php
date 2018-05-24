@@ -29,6 +29,10 @@ class MailsterRePermission {
 		add_filter( 'mailster_setting_sections', array( &$this, 'settings_tab' ), 1 );
 		add_action( 'mailster_section_tab_repermission',array( &$this, 'settings' ) );
 		add_action( 'mailster_click',array( &$this, 'click' ), 10, 4 );
+		add_action( 'mailster_export_fields',array( &$this, 'add_export_field' ) );
+		add_action( 'mailster_export_heading__gdpr',array( &$this, 'export_heading' ), 10, 2 );
+		add_action( 'mailster_export_field__gdpr',array( &$this, 'export_field' ), 10, 2 );
+		add_action( 'mailster_export_args',array( &$this, 'export_args' ), 10, 2 );
 
 	}
 
@@ -73,6 +77,45 @@ class MailsterRePermission {
 			mailster( 'subscribers' )->unsubscribe( $subscriber_id, $campaign_id, __( 'Didn\'t give consent on the RePermission campaign', 'mailster-repermission' ) );
 		}
 
+	}
+
+	public function export_heading( $value, $options ) {
+
+		return __( 'GDPR confirmation time', 'mailster-repermission' );
+	}
+
+	public function export_field( $value, $options ) {
+
+		if ( $value ) {
+			$timeoffset = mailster( 'helper' )->gmt_offset( true );
+			$format = $options['dateformat'] ? $options['dateformat'] : 'U';
+			return mailster( 'helper' )->do_timestamp( $value + $timeoffset, $format );
+		}
+
+		return __( 'not confirmed!', 'mailster-repermission' );
+	}
+
+	public function add_export_field( $fields ) {
+
+		$fields['_gdpr'] = __( 'GDPR confirmation time', 'mailster-repermission' );
+
+		return $fields;
+	}
+
+	public function export_args( $args, $options ) {
+		global $wpdb;
+
+		if ( isset( $options['column'] ) && false !== array_search( '_gdpr', $options['column'] ) ) {
+			$repermission_ids = array_map( 'trim', explode( ',' , mailster_option( 'repermission_id' ) ) );
+
+			$args['select'][] = 'subscribers.*';
+			$args['select'][] = 'actions_gdpr.timestamp AS _gdpr';
+			$args['join'][] = "LEFT JOIN {$wpdb->prefix}mailster_actions AS actions_gdpr ON actions_gdpr.type = 3 AND subscribers.ID = actions_gdpr.subscriber_id AND actions_gdpr.campaign_id IN (" . implode( ',', $repermission_ids ) . ')';
+			$args['join'][] = "LEFT JOIN {$wpdb->prefix}mailster_links AS actions_gdpr_link ON actions_gdpr_link.ID = actions_gdpr.link_id";
+			$args['where'][] = "actions_gdpr_link.link = '" . mailster_option( 'repermission_link' ) . "'";
+		}
+
+		return $args;
 	}
 
 	public function notice() {
