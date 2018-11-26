@@ -27,7 +27,7 @@
 		<td>
 		<?php $fields = mailster()->get_custom_fields(); ?>
 		<select name="mailster_options[repermission_field]">
-		<option value="0" <?php selected( ! mailster_option( 'repermission_field' ) )?>><?php esc_html_e( 'choose', 'mailster-repermission' ); ?></option>
+		<option value="0" <?php selected( ! mailster_option( 'repermission_field' ) )?>><?php esc_html_e( 'ignore', 'mailster-repermission' ); ?></option>
 		<?php foreach ( $fields as $id => $field ) : ?>
 			<option value="<?php echo esc_attr( $id ) ?>" <?php selected( mailster_option( 'repermission_field' ), $id )?>><?php echo esc_html( $field['name'] ) ?></option>
 		<?php endforeach; ?>

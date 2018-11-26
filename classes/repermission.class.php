@@ -34,6 +34,9 @@ class MailsterRePermission {
 		add_action( 'mailster_export_field__gdpr',array( &$this, 'export_field' ), 10, 2 );
 		add_action( 'mailster_export_args',array( &$this, 'export_args' ), 10, 2 );
 
+		add_action( 'upgrader_process_complete',array( &$this, 'schedule_update_meta' ) );
+		add_action( 'mailster_maybe_update_gdpr_meta_values',array( &$this, 'maybe_update_meta_values' ) );
+
 	}
 
 	public function settings_tab( $settings ) {
@@ -59,7 +62,7 @@ class MailsterRePermission {
 			return;
 		}
 
-		$repermission_ids = array_map( 'trim', explode( ',' , mailster_option( 'repermission_id' ) ) );
+		$repermission_ids = array_filter( array_map( 'trim', explode( ',' , mailster_option( 'repermission_id' ) ) ), 'is_numeric' );
 
 		if ( ! in_array( $campaign_id, $repermission_ids ) ) {
 			return;
@@ -69,10 +72,10 @@ class MailsterRePermission {
 			return;
 		}
 		if ( $target == mailster_option( 'repermission_link' ) ) {
-			if ( ! ( $field = mailster_option( 'repermission_field' ) ) ) {
-				return;
+			if ( $field = mailster_option( 'repermission_field' ) ) {
+				mailster( 'subscribers' )->add_custom_value( $subscriber_id, $field, true );
 			}
-			mailster( 'subscribers' )->add_custom_value( $subscriber_id, $field, true );
+			mailster( 'subscribers' )->update_meta( $subscriber_id, $campaign_id, 'gdpr', time() );
 		} elseif ( $target == mailster_option( 'repermission_unlink' ) ) {
 			mailster( 'subscribers' )->unsubscribe( $subscriber_id, $campaign_id, __( 'Didn\'t give consent on the RePermission campaign', 'mailster-repermission' ) );
 		}
@@ -106,7 +109,7 @@ class MailsterRePermission {
 		global $wpdb;
 
 		if ( isset( $options['column'] ) && false !== array_search( '_gdpr', $options['column'] ) ) {
-			$repermission_ids = array_map( 'trim', explode( ',' , mailster_option( 'repermission_id' ) ) );
+			$repermission_ids = array_filter( array_map( 'trim', explode( ',' , mailster_option( 'repermission_id' ) ) ), 'is_numeric' );
 
 			$args['select'][] = 'subscribers.*';
 			$args['select'][] = 'actions_gdpr.timestamp AS _gdpr';
@@ -116,6 +119,33 @@ class MailsterRePermission {
 		}
 
 		return $args;
+	}
+
+	public function schedule_update_meta() {
+		wp_schedule_single_event( time() + 10, 'mailster_maybe_update_gdpr_meta_values' );
+	}
+
+	public function maybe_update_meta_values() {
+
+		global $wpdb;
+
+		if ( $target = mailster_option( 'repermission_link' ) ) {
+
+			$repermission_ids = array_filter( array_map( 'trim', explode( ',' , mailster_option( 'repermission_id' ) ) ), 'is_numeric' );
+
+			$sql = "INSERT INTO `{$wpdb->prefix}mailster_subscriber_meta` (subscriber_id, campaign_id, meta_key, meta_value) ( SELECT actions.subscriber_id, actions.campaign_id, 'gdpr', actions.timestamp FROM `{$wpdb->prefix}mailster_actions` AS actions LEFT JOIN {$wpdb->prefix}mailster_links as links ON links.ID = actions.link_id WHERE links.link = %s AND actions.campaign_id IN (" . implode( ',', $repermission_ids ) . ') ) ON DUPLICATE KEY UPDATE meta_value = actions.timestamp';
+
+			$sql = $wpdb->prepare( $sql, $target );
+
+			$wpdb->query( $sql );
+
+			$sql = "INSERT INTO `{$wpdb->prefix}mailster_subscriber_meta` (subscriber_id, campaign_id, meta_key, meta_value) ( SELECT actions.subscriber_id, 0, 'gdpr', actions.timestamp FROM `{$wpdb->prefix}mailster_actions` AS actions LEFT JOIN {$wpdb->prefix}mailster_links as links ON links.ID = actions.link_id WHERE links.link = %s AND actions.campaign_id IN (" . implode( ',', $repermission_ids ) . ') ) ON DUPLICATE KEY UPDATE meta_value = actions.timestamp';
+
+			$sql = $wpdb->prepare( $sql, $target );
+
+			$wpdb->query( $sql );
+
+		}
 	}
 
 	public function notice() {
