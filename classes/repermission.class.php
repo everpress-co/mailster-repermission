@@ -78,6 +78,9 @@ class MailsterRePermission {
 			mailster( 'subscribers' )->update_meta( $subscriber_id, $campaign_id, 'gdpr', time() );
 		} elseif ( $target == mailster_option( 'repermission_unlink' ) ) {
 			mailster( 'subscribers' )->unsubscribe( $subscriber_id, $campaign_id, __( 'Didn\'t give consent on the RePermission campaign', 'mailster-repermission' ) );
+			if ( mailster_option( 'repermission_unsub' ) ) {
+				mailster( 'subscribers' )->change_status( $subscriber_id, 2 );
+			}
 		}
 
 	}

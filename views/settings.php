@@ -18,7 +18,7 @@
 	</tr>
 	<tr valign="top">
 		<th scope="row"><?php esc_html_e( 'No Consent Link', 'mailster-repermission' ) ?></th>
-		<td><input type="text" name="mailster_options[repermission_unlink]" value="<?php echo esc_attr( mailster_option( 'repermission_unlink' ) ); ?>" class="regular-text" placeholder="https://example.com/sorry-to-see-you-gone/">
+		<td><input type="text" name="mailster_options[repermission_unlink]" value="<?php echo esc_attr( mailster_option( 'repermission_unlink' ) ); ?>" class="regular-text" placeholder="https://example.com/sorry-to-see-you-gone/"> <label><input type="hidden" name="mailster_options[repermission_unsub]" value=""><input type="checkbox" name="mailster_options[repermission_unsub]" value="1" <?php checked( mailster_option( 'repermission_unsub' ), true )?>> <?php esc_html_e( 'Set subscriber status to "unsubscribed" after click.', 'mailster-repermission' ); ?></label>
 		<p class="howto"><?php esc_html_e( 'The link people have click to opt out.' , 'mailster-repermission' ) ?></p>
 		</td>
 	</tr>
