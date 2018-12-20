@@ -3,7 +3,7 @@ Contributors: everpress, revaxarts
 Tags: mailster, repermission, permission, gdpr
 Requires at least: 3.8
 Tested up to: 5.0
-Stable tag: 1.5
+Stable tag: 1.6
 License: GPLv2 or later
 Author: EverPress
 Author URI: https://mailster.co
@@ -28,6 +28,9 @@ Read the [Setup Guide](https://kb.mailster.co/implementing-a-re-permission-progr
 1. Option Interface.
 
 == Changelog ==
+
+= 1.6 =
+* user now resubscribes on Consent Link when already unsubscribed.
 
 = 1.5 =
 * added option to force "unsubscribe" status to subscribers
