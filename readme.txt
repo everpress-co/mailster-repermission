@@ -1,8 +1,8 @@
 === Mailster RePermission ===
-Contributors: everpress, revaxarts
+Contributors: everpress
 Tags: mailster, repermission, permission, gdpr
 Requires at least: 3.8
-Tested up to: 5.0
+Tested up to: 5.2
 Stable tag: 1.6
 License: GPLv2 or later
 Author: EverPress
