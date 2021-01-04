@@ -2,8 +2,8 @@
 Contributors: everpress
 Tags: mailster, repermission, permission, gdpr
 Requires at least: 3.8
-Tested up to: 5.5
-Stable tag: 1.6
+Tested up to: 5.6
+Stable tag: 1.7
 License: GPLv2 or later
 Author: EverPress
 Author URI: https://mailster.co
@@ -28,6 +28,9 @@ Read the [Setup Guide](https://kb.mailster.co/implementing-a-re-permission-progr
 1. Option Interface.
 
 == Changelog ==
+
+= 1.7 =
+* remove option to store consent in a custom field
 
 = 1.6 =
 * user now resubscribes on Consent Link when already unsubscribed.
