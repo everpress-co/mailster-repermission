@@ -2,7 +2,7 @@
 Contributors: everpress
 Tags: mailster, repermission, permission, gdpr
 Requires at least: 3.8
-Tested up to: 5.6
+Tested up to: 5.8
 Stable tag: 1.7
 License: GPLv2 or later
 Author: EverPress
