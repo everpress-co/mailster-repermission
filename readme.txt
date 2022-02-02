@@ -14,7 +14,7 @@ Author URI: https://mailster.co
 
 Helps to setup your Re-Permission Campaing for GDPR compliance in [Mailster](https://mailster.co/?utm_campaign=wporg&utm_source=Re-Permission).
 
-Read the [Setup Guide](https://kb.mailster.co/implementing-a-re-permission-program-for-gdpr/?utm_campaign=wporg&utm_source=Re-Permission) to get started.
+Read the [Setup Guide](https://kb.mailster.co/implementing-a-re-permission-program-for-gdpr/?utm_campaign=wporg&utm_source=Re-Permission ) to get started.
 
 == Installation ==
 
