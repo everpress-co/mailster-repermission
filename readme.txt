@@ -3,7 +3,7 @@ Contributors: everpress
 Tags: mailster, repermission, permission, gdpr
 Requires at least: 3.8
 Tested up to: 5.9
-Stable tag: 1.7
+Stable tag: 1.7.1
 License: GPLv2 or later
 Author: EverPress
 Author URI: https://mailster.co
@@ -28,6 +28,9 @@ Read the [Setup Guide](https://kb.mailster.co/implementing-a-re-permission-progr
 1. Option Interface.
 
 == Changelog ==
+
+= 1.7.1 =
+* fixed repo issue
 
 = 1.7 =
 * remove option to store consent in a custom field
