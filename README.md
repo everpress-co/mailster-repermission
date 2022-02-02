@@ -11,17 +11,17 @@ Author URI: https://mailster.co
 
 ## Description
 
-> This Plugin requires [Mailster Newsletter Plugin for WordPress](https://mailster.co/utm_campaign
+> This Plugin requires [Mailster Newsletter Plugin for WordPress](https://mailster.co/?utm_campaign=wporg&utm_source=Re-Permission+Integration+for+Mailster&utm_medium
 
-### wporg)
+### readme)
 
-Helps to setup your Re-Permission Campaing for GDPR compliance in [Mailster](https://mailster.co/?utm_campaign
+Helps to setup your Re-Permission Campaing for GDPR compliance in [Mailster](https://mailster.co/?utm_campaign=wporg&utm_source=Re-Permission+Integration+for+Mailster&utm_medium
 
-### wporg).
+### readme).
 
-Read the [Setup Guide](https://kb.mailster.co/implementing-a-re-permission-program-for-gdpr/?utm_campaign
+Read the [Setup Guide](https://kb.mailster.co/implementing-a-re-permission-program-for-gdpr/?utm_campaign=wporg&utm_source=Re-Permission+Integration+for+Mailster&utm_medium
 
-### wporg) to get started.
+### readme) to get started.
 
 ## Installation
 
@@ -31,9 +31,9 @@ Read the [Setup Guide](https://kb.mailster.co/implementing-a-re-permission-progr
 
 ### > Settings and select the `Re-Permission` tab
 
-4. Follow the [Setup Guide](https://kb.mailster.co/implementing-a-re-permission-program-for-gdpr/?utm_campaign
+4. Follow the [Setup Guide](https://kb.mailster.co/implementing-a-re-permission-program-for-gdpr/?utm_campaign=wporg&utm_source=Re-Permission+Integration+for+Mailster&utm_medium
 
-### wporg)
+### readme)
 
 ## Screenshots
 
@@ -82,6 +82,6 @@ Read the [Setup Guide](https://kb.mailster.co/implementing-a-re-permission-progr
 
 ## Additional Info
 
-This Plugin requires [Mailster Newsletter Plugin for WordPress](https://mailster.co/?utm_campaign
+This Plugin requires [Mailster Newsletter Plugin for WordPress](https://mailster.co/?utm_campaign=wporg&utm_source=Re-Permission+Integration+for+Mailster&utm_medium
 
-### wporg)
+### readme)
