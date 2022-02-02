@@ -11,7 +11,7 @@ Author URI: https://mailster.co
 
 ## Description
 
-> This Plugin requires [Mailster Newsletter Plugin for WordPress](https://mailster.co/?utm_campaign
+> This Plugin requires [Mailster Newsletter Plugin for WordPress](https://mailster.co/\?utm_campaign
 
 ### wporg)
 
