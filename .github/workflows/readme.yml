@@ -2,7 +2,7 @@ name: Convert Readme
 on: 'push'
 jobs:
   tag:
-    name: Convert
+    name: Convert Readme
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
