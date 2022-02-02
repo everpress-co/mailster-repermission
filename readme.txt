@@ -27,6 +27,7 @@ Read the [Setup Guide](https://kb.mailster.co/implementing-a-re-permission-progr
 
 1. Option Interface.
 
+
 == Changelog ==
 
 = 1.7.1 =
