@@ -8,6 +8,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@master
       - name: Convert Readme
-        uses: evrpress/wp2md@master
+        uses: evrpress/action-wp2md@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
