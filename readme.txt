@@ -10,7 +10,7 @@ Author URI: https://mailster.co
 
 == Description ==
 
-> This Plugin requires [Mailster Newsletter Plugin for WordPress](https://mailster.co/?utm_campaign=wporg)
+> This Plugin requires [Mailster Newsletter Plugin for WordPress](https://mailster.co/\?utm_campaign=wporg)
 
 Helps to setup your Re-Permission Campaing for GDPR compliance in [Mailster](https://mailster.co/?utm_campaign=wporg).
 
