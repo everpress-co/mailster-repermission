@@ -10,7 +10,7 @@ License: GPLv2 or later
 
 > This Plugin requires [Mailster Newsletter Plugin for WordPress](https://mailster.co/?utm_campaign=wporg&utm_source=Re-Permission+Integration+for+Mailster&utm_medium=readme)
 
-Helps to setup your Re-Permission Campaing for GDPR compliance in [Mailster](https://mailster.co/?utm_campaign=wporg&utm_source=Re-Permission+Integration+for+Mailster&utm_medium=readme).
+Helps to setup your Re-Permission Campaign for GDPR compliance in [Mailster](https://mailster.co/?utm_campaign=wporg&utm_source=Re-Permission+Integration+for+Mailster&utm_medium=readme).
 
 Read the [Setup Guide](https://kb.mailster.co/implementing-a-re-permission-program-for-gdpr/?utm_campaign=wporg&utm_source=Re-Permission+Integration+for+Mailster&utm_medium=readme) to get started.
 
