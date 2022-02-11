@@ -24,7 +24,10 @@ Read the [Setup Guide](https://kb.mailster.co/implementing-a-re-permission-progr
 
 ## Screenshots
 
-1. Option Interface.
+### 1. Option Interface.
+
+![Option Interface.](https://ps.w.org/mailster-repermission/assets/screenshot-1.png)
+
 
 ## Changelog
 
