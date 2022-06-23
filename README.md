@@ -3,7 +3,7 @@
 Contributors: everpress  
 Tags: mailster, repermission, permission, gdpr  
 Requires at least: 3.8  
-Tested up to: 5.9  
+Tested up to: 6.0  
 Stable tag: 1.7.1  
 License: GPLv2 or later
 
@@ -27,7 +27,6 @@ Read the [Setup Guide](https://kb.mailster.co/implementing-a-re-permission-progr
 ### 1. Option Interface.
 
 ![Option Interface.](https://ps.w.org/mailster-repermission/assets/screenshot-1.png)
-
 
 ## Changelog
 
