@@ -107,7 +107,7 @@ class MailsterRePermission {
 	}
 
 	public function notice() {
-		$msg = sprintf( esc_html__( 'You have to enable the %s to use the Re-Permission Add On!', 'mailster-repermission' ), '<a href="https://mailster.co/?utm_campaign=wporg&utm_source=Re-Permission+for+Mailster&utm_medium=plugin">Mailster Newsletter Plugin</a>' );
+		$msg = sprintf( esc_html__( 'You have to enable the %s to use the Re-Permission Add On!', 'mailster-repermission' ), '<a href="https://mailster.co/?utm_campaign=wporg&utm_source=wordpress.org&utm_medium=plugin&utm_term=Re-Permission">Mailster Newsletter Plugin</a>' );
 		?>
 		<div class="error"><p><strong><?php	echo $msg; ?></strong></p></div>
 		<?php
