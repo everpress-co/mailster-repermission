@@ -1,7 +1,7 @@
 <table class="form-table">
 	<tr valign="top">
 		<th scope="row">&nbsp;</th>
-		<td><p class="description"><?php echo sprintf( esc_html__( 'Please follow %s for your Re-Permission Campaign!', 'mailster-repermission' ), '<a href="https://kb.mailster.co/implementing-a-re-permission-program-for-gdpr/" class="external">' . esc_html__( 'this guide', 'mailster-repermission' ) . '</a>' ); ?></p>
+		<td><p class="description"><?php printf( esc_html__( 'Please follow %s for your Re-Permission Campaign!', 'mailster-repermission' ), '<a href="https://kb.mailster.co/implementing-a-re-permission-program-for-gdpr/" class="external">' . esc_html__( 'this guide', 'mailster-repermission' ) . '</a>' ); ?></p>
 		</td>
 	</tr>
 	<tr valign="top">
