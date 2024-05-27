@@ -32,7 +32,6 @@ class MailsterRePermission {
 
 		add_action( 'upgrader_process_complete', array( &$this, 'schedule_update_meta' ) );
 		add_action( 'mailster_maybe_update_gdpr_meta_values', array( &$this, 'maybe_update_meta_values' ) );
-
 	}
 
 	public function settings_tab( $settings ) {
@@ -49,7 +48,6 @@ class MailsterRePermission {
 	public function settings() {
 
 		include $this->plugin_path . '/views/settings.php';
-
 	}
 
 	public function click( $subscriber_id, $campaign_id, $target, $index ) {
@@ -75,7 +73,6 @@ class MailsterRePermission {
 			mailster( 'subscribers' )->unsubscribe( $subscriber_id, $campaign_id, __( 'Didn\'t give consent on the RePermission campaign', 'mailster-repermission' ) );
 			mailster( 'subscribers' )->change_status( $subscriber_id, 2 );
 		}
-
 	}
 
 
@@ -111,14 +108,11 @@ class MailsterRePermission {
 		?>
 		<div class="error"><p><strong><?php	echo $msg; ?></strong></p></div>
 		<?php
-
 	}
 
 	public function activate() {
 
 		if ( function_exists( 'mailster' ) ) {
 		}
-
 	}
-
 }

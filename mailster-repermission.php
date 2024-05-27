@@ -15,5 +15,5 @@ define( 'MAILSTER_REPERMISSION_VERSION', '1.7.1' );
 define( 'MAILSTER_REPERMISSION_REQUIRED_VERSION', '2.4' );
 define( 'MAILSTER_REPERMISSION_FILE', __FILE__ );
 
-require_once dirname( __FILE__ ) . '/classes/repermission.class.php';
+require_once __DIR__ . '/classes/repermission.class.php';
 new MailsterRePermission();

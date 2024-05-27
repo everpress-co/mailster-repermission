@@ -1,9 +1,9 @@
 # Mailster RePermission
 
-Contributors: everpress, xaverb  
+Contributors: everpress, mailster, xaverb  
 Tags: mailster, repermission, permission, gdpr  
-Requires at least: 3.8  
-Tested up to: 6.0  
+Requires at least: 6.0  
+Tested up to: 6.5  
 Stable tag: 1.7.1  
 License: GPLv2 or later
 
@@ -24,7 +24,7 @@ Read the [Setup Guide](https://kb.mailster.co/implementing-a-re-permission-progr
 
 ## Screenshots
 
-### 1. Option Interface.
+### 1. Option Interface
 
 ![Option Interface.](https://ps.w.org/mailster-repermission/assets/screenshot-1.png)
 
@@ -32,39 +32,39 @@ Read the [Setup Guide](https://kb.mailster.co/implementing-a-re-permission-progr
 
 ### 1.7.1
 
--   fixed repo issue
+- fixed repo issue
 
 ### 1.7
 
--   remove option to store consent in a custom field
+- remove option to store consent in a custom field
 
 ### 1.6
 
--   user now resubscribes on Consent Link when already unsubscribed.
+- user now resubscribes on Consent Link when already unsubscribed.
 
 ### 1.5
 
--   added option to force "unsubscribe" status to subscribers
+- added option to force "unsubscribe" status to subscribers
 
 ### 1.4
 
--   stores now timestamp of confirmation for better compatibility
+- stores now timestamp of confirmation for better compatibility
 
 ### 1.3
 
--   added: export field with timestamp of confirmation (requires Mailster 2.3.7+)
+- added: export field with timestamp of confirmation (requires Mailster 2.3.7+)
 
 ### 1.2
 
--   added: option to define a link for no consent
+- added: option to define a link for no consent
 
 ### 1.1
 
--   allow multiple IDs for the campaign
+- allow multiple IDs for the campaign
 
 ### 1.0
 
--   initial release
+- initial release
 
 ## Additional Info
 
